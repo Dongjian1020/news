@@ -45,7 +45,7 @@ a.AndroidMenifest中需要配置参数
     
 b.在libs中添加news-1.0.001.aar</br>
 c.在Gradle中添加如下依赖库</br>
-``` java
+``` groovy
 repositories {
     mavenCentral()
     maven {
