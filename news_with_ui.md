@@ -30,18 +30,7 @@
 * 列表页广告样式目前包括：native大图样式，native小图样式，native三图样式
 
 ## <a id="Integration"></a>集成方法
-a.AndroidMenifest中需要配置参数
-
-   ``` xml
-    <application ...>
-    <!-- Application ID 有sand和prod之分，在开发时使用sand，正式上线时切换为prod，另外需要在Web控制台进行部署到上次环境操作 -->
-    <meta-data android:name="com.droi.sdk.application_id" android:value="[DroiBaaS Application ID]" />
-    <meta-data android:name="com.droi.sdk.platform_key" android:value="[DroiBaaS ClientKey]" />
-    <meta-data android:name="com.droi.sdk.channel_name" android:value="[ChannelName]" />
-    </application>
-    ```
-
-    
+a.AndroidMenifest中需要配置参数    
 b.在libs中添加news-1.0.001.aar</br>
 c.在Gradle中添加如下依赖库</br>
 ``` groovy
