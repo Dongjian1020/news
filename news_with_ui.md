@@ -33,10 +33,20 @@
 a.AndroidMenifest中需要配置参数    
 b.在libs中添加news-1.0.001.aar</br>
 c.在Gradle中添加如下依赖库</br>
-``` java 
-DroiNews.initialize(context, Constants.MEDIA_ID, false);
-DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG);
-DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL);
+``` xml
+    <application>
+        <meta-data
+            android:name="com.droi.sdk.application_id"
+            android:value="xe8umbzhZypNepsrj1D6ZheBjDDerM2BlQBHlBUF"></meta-data>
+
+        <meta-data
+            android:name="com.droi.sdk.channel_name"
+            android:value="DROI_CHANNEL" />
+        <meta-data
+            android:name="com.droi.sdk.platform_key"
+            android:value="IKxzEKp5AWi8O9pIilm4PShtFgNoZCq4PShtFgNo" />
+        <!-- app info end -->
+    </application>
 ```
 ``` groovy
 repositories {
