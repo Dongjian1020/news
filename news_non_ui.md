@@ -153,7 +153,7 @@ display展示样式如下：
 ---|---|---|---|---|---|---|---|---
 无图，纯文字 | 小图 | 三图 | 大图 | 热词、田字 | 四图 | 多行多文本，主要用于段子 | 视频列表页播放 | 专题、大图
 
-==**广告数据和新闻数据以adtype字段作区分，0为新闻1为广告**==
+**<font color=red>广告数据和新闻数据以adtype字段作区分，0为新闻1为广告</font>**
 如果返回的数据为广告类型示例如下：
 
 ```json
@@ -190,7 +190,7 @@ List<NewsObject> list;
 NewsObject obj = list.get(i);
 String adUrl = obj.onAdClick(View v) //在主线程中执行
 ```
-显示广告上报接口：**==(注意如果未调用此接口会导致后台无法统计广告展示，影响广告收益)==**
+显示广告上报接口：**<font color=red>(注意如果未调用此接口会导致后台无法统计广告展示，影响广告收益)</font>**
 
 ```java
 obj.onAdShow(View v);//在广告展示在可视区域后调用
@@ -209,7 +209,7 @@ DroiNews.uploadNewsDetailDwell(newsId, time);//参数newsId为新闻id，String�
 ```
 ## <a id="Ad"></a>详情页显示js广告（必接）
 
-初始化的时候传入js原生广告id：**==(id从adroi广告开放平台获取)==**
+初始化的时候传入js原生广告id：**<font color=red>(id从adroi广告开放平台获取)**</font>
 ```
 HashMap<Integer,String> ids = new HashMap<>();//此为js广告id
 ids.put(0,id1);
