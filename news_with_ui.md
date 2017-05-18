@@ -59,7 +59,7 @@ dependencies {
     
     compile(name: "news-1.0.001", ext: "aar")
     compile 'com.droi.sdk:Core:+'
-    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.squareup.picasso:picasso:2.5.1'
     compile 'com.squareup.okhttp3:okhttp:3.0.1'
 }
 ```
