@@ -66,12 +66,12 @@ dependencies {
 ## <a id="Interface"></a>接口使用
 a.继承AppApplication在Application的onCreate方法中初始化SDK：
 ``` java 
-DroiNews.initialize(context, Constants.MEDIA_ID, false);
+DroiNews.initialize(context, MEDIA_ID, isDebugMode,isNoAd);
 DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG);
 DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL);
 ```
 </br>
-** 注：**MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL 需要向内容后台申请, 请参考DEMO里对应的值。
+** 注：**MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL 需要向内容后台申请,isDebugMode为是否调试模式，isNoAd为列表页是否显示广告， 请参考DEMO里对应的值。
 
 b.加载新闻列表页：</br>
 目前News SDK提供封装好的新闻列表页面: 
@@ -86,4 +86,6 @@ transaction.add(R.id.myfragment, f, "flag");
 
 transaction.commit();
 ```
- 
+c.设置主题颜色：</br>
+在res->values目录下的colors.xml文件中增加以下节点设置颜色，如下：</br>
+<color name="customer_color">#303F9F</color>
