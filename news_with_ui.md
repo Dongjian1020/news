@@ -27,20 +27,11 @@
 
 ## <a id="Ad"></a>广告接入
 * SDK支持列页的广告数据拉取与展示。(目前只支持Adroi广告)
-* 列表页广告样式目前包括：native大图样式，native小图样式，native三图样式
+* 列表页广告样式目前包括：native大图样式，native小图样式。
 
 ## <a id="Integration"></a>集成方法
-a.AndroidMenifest中需要配置参数    
-``` xml
-    <application>
-        <!-- Application ID 有sand和prod之分，在开发时使用sand，正式上线时切换为prod，另外需要在Web控制台进行部署到上次环境操作 -->
-        <meta-data android:name="com.droi.sdk.application_id" android:value="[DroiBaaS Application ID]" />
-        <meta-data android:name="com.droi.sdk.platform_key" android:value="[DroiBaaS ClientKey]" />
-        <meta-data android:name="com.droi.sdk.channel_name" android:value="[ChannelName]" />
-    </application>
-```
-b.在libs中添加news-1.0.001.aar</br>
-c.在Gradle中添加如下依赖库</br>
+a.在libs中添加news-1.0.001.aar</br>
+b.在Gradle中添加如下依赖库</br>
 
 ``` groovy
 repositories {
@@ -71,7 +62,7 @@ DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG);
 DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL);
 ```
 </br>
-** 注：**MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL 需要向内容后台申请,isDebugMode为是否调试模式，isNoAd为列表页是否显示广告， 请参考DEMO里对应的值。
+** 注：**MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL，ids 需要在控制台提交工单申请,isDebugMode为是否调试模式，isNoAd为列表页是否显示广告， 请参考DEMO里对应的值。
 
 b.加载新闻列表页：</br>
 目前News SDK提供封装好的新闻列表页面: 
