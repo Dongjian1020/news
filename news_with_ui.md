@@ -85,5 +85,5 @@ transaction.add(R.id.myfragment, f, "flag");
 transaction.commit();
 ```
 c.设置主题颜色：</br>
-在res->values目录下的colors.xml文件中增加以下节点设置颜色，如下：</br>
-<color name="customer_color">#303F9F</color>
+在res->values目录下的colors.xml文件中增加“customer_color”设置颜色，如下：</br>
+**<color name="customer_color">#303F9F</color>**
