@@ -20,7 +20,8 @@ DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL_IMAGE);
 DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG_IMAGE);
 
 ```
-开发者在调用初始化接口的时候，需要传入五个参数，除isDebugMode外其他四个参数从开放平台申请，参数如下：
+>id1,id2,SLOT_ID_SMALL_IMAGE,SLOT_ID_BIG_IMAGE这4个参数需要开发者在控制台提交工单申请。
+开发者在调用初始化接口的时候，需要传入对应参数，参数如下：
 
 参数名 | 说明 |
 ---|---
@@ -209,7 +210,7 @@ DroiNews.uploadNewsDetailDwell(newsId, time);//参数newsId为新闻id，String�
 ```
 ## <a id="Ad"></a>详情页显示js广告（必接）
 
-初始化的时候传入js原生广告id：**<font color=red>(id从adroi广告开放平台获取)**</font>
+初始化的时候传入js原生广告id：**<font color=red>(id需要开发者在控制台提交工单申请)**</font>
 ```
 HashMap<Integer,String> ids = new HashMap<>();//此为js广告id
 ids.put(0,id1);
