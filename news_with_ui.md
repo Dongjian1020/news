@@ -57,9 +57,16 @@ dependencies {
 ## <a id="Interface"></a>接口使用
 a.继承AppApplication在Application的onCreate方法中初始化SDK：
 ``` java 
-DroiNews.initialize(context, MEDIA_ID, isDebugMode,isNoAd);
-DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG);
-DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL);
+//初始化一（有广告）
+HashMap<Integer,String> ids = new HashMap<>();
+ids.put(0,id1);
+ids.put(1,id2);
+DroiNews.initialize(context, MEDIA_ID, isDebugMode,ids,isNoAd);//isNoAd设置为false
+DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL_IMAGE);
+DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG_IMAGE);
+
+//初始化二（无广告）
+DroiNews.initialize(context, null, isDebugMode,null,true);
 ```
 </br>
 ** 注：**MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL，ids 需要在控制台提交工单申请,isDebugMode为是否调试模式，isNoAd为列表页是否显示广告， 请参考DEMO里对应的值。
