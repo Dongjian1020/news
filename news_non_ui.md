@@ -20,7 +20,7 @@ DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL_IMAGE);
 DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG_IMAGE);
 
 ```
->id1,id2,SLOT_ID_SMALL_IMAGE,SLOT_ID_BIG_IMAGE这4个参数需要开发者在控制台提交工单申请。
+>id1,id2,SLOT_ID_SMALL_IMAGE,SLOT_ID_BIG_IMAGE这4个参数需要开发者在控制台提交工单申请。</br>
 开发者在调用初始化接口的时候，需要传入对应参数，参数如下：
 
 参数名 | 说明 |
