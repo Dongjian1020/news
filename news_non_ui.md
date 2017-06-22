@@ -210,7 +210,7 @@ DroiNews.uploadNewsListDwell(time);//time为时间，int类型，单位为秒
 //统计详情页停留时间
 DroiNews.uploadNewsDetailDwell(newsId, time);//参数newsId为新闻id，String类型，time是时间，int类型。
 ```
-## <a id="Ad"></a>详情页显示js广告（必接）
+## <a id="Ad"></a>详情页显示js广告（可选）
 
 初始化的时候传入js原生广告id：**<font color=red>(id需要开发者在控制台提交工单申请)**</font>
 ```
