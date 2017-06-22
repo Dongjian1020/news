@@ -12,26 +12,28 @@
 ## <a id="Init"></a>初始化（必接）
 
 ```java
+//初始化一（有广告）
 HashMap<Integer,String> ids = new HashMap<>();
 ids.put(0,id1);
 ids.put(1,id2);
-DroiNews.initialize(context, MEDIA_ID, isDebugMode,ids,"-adroi");
+DroiNews.initialize(context, MEDIA_ID, isDebugMode,ids,isNoAd);//isNoAd设置为false
 DroiNews.registerAdSlot(DroiNews.AD_STYLE_SMALL_IMAGE, SLOT_ID_SMALL_IMAGE);
 DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG_IMAGE);
 
+//初始化二（无广告）
+DroiNews.initialize(context, null, isDebugMode,null,true);
 ```
 >id1,id2,SLOT_ID_SMALL_IMAGE,SLOT_ID_BIG_IMAGE这4个参数需要开发者在控制台提交工单申请。</br>
 开发者在调用初始化接口的时候，需要传入对应参数，参数如下：
 
-参数名 | 说明 |
----|---
-isDebugMode | true为调试模式false为发布模式 
-MEDIA_ID | 广告ID
-SLOT_ID_SMALL_IMAGE| 小图广告位ID
-SLOT_ID_BIG_IMAGE| 大图广告位ID
-ids| 详情页js广告位ID(参看详情页显示js广告)
-"-adroi"| 固定字段
-
+参数名 | 说明 |类型
+---|---|---
+isDebugMode | true为调试模式false为发布模式 |boolean
+MEDIA_ID | 广告ID |String
+SLOT_ID_SMALL_IMAGE| 小图广告位ID |String
+SLOT_ID_BIG_IMAGE| 大图广告位ID |String
+ids| 详情页js广告位ID(参看详情页显示js广告) |Map
+isNoAd| true为不显示列表页广告false则显示广告 |boolean
 ## <a id="TopNews"></a>获取置顶新闻数据
 
 ```java
