@@ -47,11 +47,11 @@ repositories {
 
 dependencies {
     XXXXXXXXX........//工程原有依赖库
-    
-    compile(name: "news-1.0.001", ext: "aar")
     compile 'com.droi.sdk:Core:+'
     compile 'com.squareup.picasso:picasso:2.5.1'
     compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile(name: "news-1.0.004", ext: "aar")
+    compile(name: "news-ui-1.0.004", ext: "aar")
 }
 ```
 ## <a id="Interface"></a>接口使用
