@@ -30,7 +30,7 @@
 * 列表页广告样式目前包括：native大图样式，native小图样式。
 
 ## <a id="Integration"></a>集成方法
-a.在libs中添加news-1.0.001.aar</br>
+a.在libs中添加news-1.0.004.aar和news-ui-1.0.004.aar文件，**无广告模式下则只需要添加news-1.0.004.aar文件即可**</br>
 b.在Gradle中添加如下依赖库</br>
 
 ``` groovy
@@ -69,11 +69,19 @@ DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG_IMAGE);
 DroiNews.initialize(context, null, isDebugMode,null,true);
 ```
 </br>
-** 注：**MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL，ids 需要在控制台提交工单申请,isDebugMode为是否调试模式，isNoAd为列表页是否显示广告， 请参考DEMO里对应的值。
+参数名 | 说明 |类型
+---|---|---
+isDebugMode | true为调试模式false为发布模式 |boolean
+MEDIA_ID | 广告ID |String
+SLOT_ID_SMALL_IMAGE| 小图广告位ID |String
+SLOT_ID_BIG_IMAGE| 大图广告位ID |String
+ids| 详情页js广告位ID(参看详情页显示js广告) |Map
+isNoAd| true为不显示列表页广告false则显示广告 |boolean
+** 注：**MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL，ids 需要在控制台提交工单申请。
 
 b.加载新闻列表页：</br>
 目前News SDK提供封装好的新闻列表页面: 
-com.droi.sdk.news.DroiNewsFragment
+com.droi.sdk.ui.DroiNewsFragment
 主程序可以把该fragment集成到相关的activity中。
 ``` java
 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
