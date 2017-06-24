@@ -23,8 +23,6 @@ DroiNews.registerAdSlot(DroiNews.AD_STYLE_BIG_IMAGE, SLOT_ID_BIG_IMAGE);
 //初始化二（无广告）
 DroiNews.initialize(context, null, isDebugMode,null,true);
 ```
->id1,id2,SLOT_ID_SMALL_IMAGE,SLOT_ID_BIG_IMAGE这4个参数需要开发者在控制台提交工单申请。   
-
 
 开发者在调用初始化接口的时候，需要传入对应参数，参数如下：
 
@@ -36,6 +34,8 @@ SLOT_ID_SMALL_IMAGE| 小图广告位ID |String
 SLOT_ID_BIG_IMAGE| 大图广告位ID |String
 ids| 详情页js广告位ID(参看详情页显示js广告) |Map
 isNoAd| true为不显示列表页广告false则显示广告 |boolean
+
+**注：MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL，ids 需要在控制台提交工单申请。**
 ## <a id="TopNews"></a>获取置顶新闻数据
 
 ```java
