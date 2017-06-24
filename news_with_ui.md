@@ -81,7 +81,7 @@ ids| 详情页js广告位ID(参看详情页显示js广告) |Map
 isNoAd| true为不显示列表页广告false则显示广告 |boolean
 
 
-** 注：MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL，ids 需要在控制台提交工单申请。**
+**注：MEDIA_ID,SLOT_ID_BIG,SLOT_ID_SMALL，ids 需要在控制台提交工单申请。**
 
 b.加载新闻列表页：</br>
 目前News SDK提供封装好的新闻列表页面: 
